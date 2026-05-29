@@ -7,7 +7,7 @@ const Skills = () => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-            { threshold: 0.15 }
+            { threshold: 0.1 }
         )
         if (sectionRef.current) observer.observe(sectionRef.current)
         return () => observer.disconnect()
@@ -41,54 +41,36 @@ const Skills = () => {
     ]
 
     return (
-        <section
-            id="skills"
-            ref={sectionRef}
-            style={{
-                background: '#080808',
-                padding: '120px 5%',
-                position: 'relative',
-                overflow: 'hidden',
-            }}
-        >
+        <section id="skills" ref={sectionRef} style={{
+            background: '#080808', padding: '100px 5%',
+            position: 'relative', overflow: 'hidden',
+        }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                {/* Section label */}
+                {/* Label */}
                 <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '16px',
-                    marginBottom: '20px',
-                    opacity: visible ? 1 : 0,
-                    transition: 'all 0.7s ease',
+                    display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px',
+                    opacity: visible ? 1 : 0, transition: 'all 0.7s ease',
                 }}>
-                    <div style={{ width: '40px', height: '1px', background: '#D4AF37' }} />
+                    <div style={{ width: '40px', height: '1px', background: '#D4AF37', flexShrink: 0 }} />
                     <span style={{
-                        fontFamily: "'Raleway', sans-serif",
-                        fontSize: '11px',
-                        letterSpacing: '0.3em',
-                        color: '#D4AF37',
-                        textTransform: 'uppercase',
+                        fontFamily: "'Raleway', sans-serif", fontSize: '11px',
+                        letterSpacing: '0.3em', color: '#D4AF37', textTransform: 'uppercase',
                     }}>03. Skills</span>
                 </div>
 
                 <h2 style={{
                     fontFamily: "'Playfair Display', serif",
-                    fontSize: 'clamp(32px, 4vw, 52px)',
-                    fontWeight: '700',
-                    color: '#fff',
-                    marginBottom: '72px',
-                    opacity: visible ? 1 : 0,
-                    transition: 'all 0.7s ease 0.1s',
+                    fontSize: 'clamp(28px, 4vw, 52px)',
+                    fontWeight: '700', color: '#fff', marginBottom: '60px',
+                    opacity: visible ? 1 : 0, transition: 'all 0.7s ease 0.1s',
                 }}>
                     My Technical <span style={{ color: '#D4AF37', fontStyle: 'italic' }}>Expertise</span>
                 </h2>
 
-                {/* Skill bars */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
-                    gap: '60px',
-                    marginBottom: '80px',
+                {/* Skill bars grid → single col on mobile */}
+                <div className="skills-grid" style={{
+                    display: 'grid', gridTemplateColumns: '1fr 1fr',
+                    gap: '52px', marginBottom: '72px',
                 }}>
                     {skillGroups.map((group, gi) => (
                         <div key={gi} style={{
@@ -97,39 +79,24 @@ const Skills = () => {
                             transition: `all 0.8s ease ${gi * 0.15}s`,
                         }}>
                             <h3 style={{
-                                fontFamily: "'Raleway', sans-serif",
-                                fontSize: '11px',
-                                letterSpacing: '0.25em',
-                                color: '#D4AF37',
-                                textTransform: 'uppercase',
-                                marginBottom: '32px',
+                                fontFamily: "'Raleway', sans-serif", fontSize: '11px',
+                                letterSpacing: '0.25em', color: '#D4AF37',
+                                textTransform: 'uppercase', marginBottom: '28px',
                             }}>{group.category}</h3>
 
                             {group.skills.map((skill, si) => (
-                                <div key={si} style={{ marginBottom: '28px' }}>
-                                    <div style={{
-                                        display: 'flex',
-                                        justifyContent: 'space-between',
-                                        marginBottom: '10px',
-                                    }}>
+                                <div key={si} style={{ marginBottom: '24px' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
                                         <span style={{
-                                            fontFamily: "'Raleway', sans-serif",
-                                            fontSize: '13px',
-                                            color: '#ccc',
-                                            letterSpacing: '0.05em',
+                                            fontFamily: "'Raleway', sans-serif", fontSize: '13px',
+                                            color: '#ccc', letterSpacing: '0.04em',
                                         }}>{skill.name}</span>
                                         <span style={{
-                                            fontFamily: "'Raleway', sans-serif",
-                                            fontSize: '12px',
-                                            color: '#D4AF37',
+                                            fontFamily: "'Raleway', sans-serif", fontSize: '12px', color: '#D4AF37',
                                         }}>{skill.level}%</span>
                                     </div>
-                                    {/* Track */}
                                     <div style={{
-                                        height: '2px',
-                                        background: 'rgba(255,255,255,0.06)',
-                                        position: 'relative',
-                                        overflow: 'hidden',
+                                        height: '2px', background: 'rgba(255,255,255,0.06)', overflow: 'hidden',
                                     }}>
                                         <div style={{
                                             height: '100%',
@@ -144,52 +111,37 @@ const Skills = () => {
                     ))}
                 </div>
 
-                {/* Tech tags */}
+                {/* Tags */}
                 <div style={{
-                    borderTop: '1px solid rgba(212,175,55,0.12)',
-                    paddingTop: '56px',
-                    opacity: visible ? 1 : 0,
-                    transition: 'all 0.7s ease 0.5s',
+                    borderTop: '1px solid rgba(212,175,55,0.12)', paddingTop: '48px',
+                    opacity: visible ? 1 : 0, transition: 'all 0.7s ease 0.5s',
                 }}>
                     <p style={{
-                        fontFamily: "'Raleway', sans-serif",
-                        fontSize: '11px',
-                        letterSpacing: '0.25em',
-                        color: '#555',
-                        textTransform: 'uppercase',
-                        marginBottom: '24px',
+                        fontFamily: "'Raleway', sans-serif", fontSize: '11px',
+                        letterSpacing: '0.25em', color: '#555',
+                        textTransform: 'uppercase', marginBottom: '20px',
                     }}>Tools & Technologies</p>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                         {tools.map((tool, i) => (
-                            <span
-                                key={i}
-                                style={{
-                                    fontFamily: "'Raleway', sans-serif",
-                                    fontSize: '12px',
-                                    color: '#888',
-                                    border: '1px solid rgba(212,175,55,0.2)',
-                                    padding: '8px 18px',
-                                    letterSpacing: '0.08em',
-                                    transition: 'all 0.25s ease',
-                                    cursor: 'default',
-                                }}
-                                onMouseEnter={e => {
-                                    e.target.style.color = '#D4AF37'
-                                    e.target.style.borderColor = '#D4AF37'
-                                    e.target.style.background = 'rgba(212,175,55,0.06)'
-                                }}
-                                onMouseLeave={e => {
-                                    e.target.style.color = '#888'
-                                    e.target.style.borderColor = 'rgba(212,175,55,0.2)'
-                                    e.target.style.background = 'transparent'
-                                }}
-                            >
-                                {tool}
-                            </span>
+                            <span key={i} style={{
+                                fontFamily: "'Raleway', sans-serif", fontSize: '12px',
+                                color: '#888', border: '1px solid rgba(212,175,55,0.2)',
+                                padding: '7px 16px', letterSpacing: '0.06em',
+                                transition: 'all 0.25s ease', cursor: 'default',
+                            }}
+                                onMouseEnter={e => { e.target.style.color = '#D4AF37'; e.target.style.borderColor = '#D4AF37'; e.target.style.background = 'rgba(212,175,55,0.06)' }}
+                                onMouseLeave={e => { e.target.style.color = '#888'; e.target.style.borderColor = 'rgba(212,175,55,0.2)'; e.target.style.background = 'transparent' }}
+                            >{tool}</span>
                         ))}
                     </div>
                 </div>
             </div>
+
+            <style>{`
+        @media (max-width: 768px) {
+          .skills-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+        }
+      `}</style>
         </section>
     )
 }
