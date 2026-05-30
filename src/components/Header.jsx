@@ -52,7 +52,7 @@ const Header = () => {
                                 fontFamily: "'Playfair Display', serif",
                                 color: '#D4AF37', fontSize: '13px', fontWeight: '700',
                                 transform: 'rotate(-45deg)',
-                            }}>P</span>
+                            }}>KR</span>
                         </div>
                         <span style={{
                             fontFamily: "'Playfair Display', serif",
