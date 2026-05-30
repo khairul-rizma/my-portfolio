@@ -72,7 +72,7 @@ const Hero = () => {
                     lineHeight: 1.05, margin: '0 0 8px',
                     animation: 'fadeUp 0.8s ease 0.25s both',
                     letterSpacing: '-0.01em',
-                }}>Your Name</h1>
+                }}>Khairul Rizma</h1>
 
                 {/* Subtitle */}
                 <div style={{ position: 'relative', display: 'inline-block', marginBottom: '32px' }}>
@@ -82,7 +82,7 @@ const Hero = () => {
                         fontWeight: '400', fontStyle: 'italic',
                         color: '#888', margin: 0,
                         animation: 'fadeUp 0.8s ease 0.4s both',
-                    }}>Crafting Digital Experiences</h2>
+                    }}>Technical Support Engineer</h2>
                     <div ref={lineRef} style={{
                         height: '2px',
                         background: 'linear-gradient(90deg, #D4AF37, #F5E17A)',

@@ -62,7 +62,7 @@ const About = () => {
                             fontFamily: "'Raleway', sans-serif", fontSize: '15px',
                             lineHeight: '1.9', color: '#777', marginBottom: '20px',
                         }}>
-                            I'm a Frontend Developer with a deep passion for crafting interfaces that don't
+                            I'm a Technical Support Engineer & Aspiring Frontend Developer with a deep passion for crafting interfaces that don't
                             just work — they delight. I believe great software is born at the intersection
                             of thoughtful engineering and refined design sensibility.
                         </p>
@@ -78,7 +78,7 @@ const About = () => {
                             <span style={{
                                 fontFamily: "'Playfair Display', serif",
                                 fontStyle: 'italic', fontSize: '22px', color: '#D4AF37',
-                            }}>Your Name</span>
+                            }}>Khairul Rizma</span>
                         </div>
                     </div>
 
@@ -115,10 +115,10 @@ const About = () => {
 
                         {/* Details */}
                         {[
-                            { label: 'Role', value: 'Frontend Developer' },
-                            { label: 'Location', value: 'Your City, Country' },
-                            { label: 'Availability', value: 'Open to Work' },
-                            { label: 'Focus', value: 'React • TypeScript • UI/UX' },
+                            { label: 'Role', value: 'Technical Support Engineer & Aspiring Frontend Developer' },
+                            { label: 'Location', value: 'Kuala Lumpur, Malaysia' },
+                            { label: 'Availability', value: 'Open for new opportunities' },
+                            { label: 'Focus', value: 'Technical Support • Frontend Development • JavaScript • React' },
                         ].map((item, i) => (
                             <div key={i} style={{
                                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',

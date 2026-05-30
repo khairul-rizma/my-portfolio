@@ -29,9 +29,9 @@ const Contact = () => {
     }
 
     const socials = [
-        { label: 'GitHub', href: 'https://github.com/' },
-        { label: 'LinkedIn', href: 'https://linkedin.com/' },
-        { label: 'Twitter', href: 'https://twitter.com/' },
+        { label: 'GitHub', href: 'https://github.com/khairul-rizma' },
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mohd-khairul-rizma-mohd-mazelan-871082161/' },
+        { label: 'Phone Number', href: '+6011-1100 9091' },
     ]
 
     return (
@@ -82,7 +82,7 @@ const Contact = () => {
                             a question, or just want to connect — my inbox is always open.
                         </p>
 
-                        <a href="mailto:your@email.com" style={{
+                        <a href="mailto:mohdkhairul9797@gmail.com" style={{
                             fontFamily: "'Playfair Display', serif",
                             fontStyle: 'italic', fontSize: '20px',
                             color: '#D4AF37', textDecoration: 'none',
@@ -92,7 +92,7 @@ const Contact = () => {
                         }}
                             onMouseEnter={e => e.target.style.borderColor = '#D4AF37'}
                             onMouseLeave={e => e.target.style.borderColor = 'rgba(212,175,55,0.3)'}
-                        >your@email.com</a>
+                        >mohdkhairul9797@gmail.com</a>
 
                         <div style={{ display: 'flex', gap: '28px', flexWrap: 'wrap' }}>
                             {socials.map((s, i) => (
@@ -198,11 +198,11 @@ const Contact = () => {
                 }}>
                     <span style={{
                         fontFamily: "'Raleway', sans-serif", fontSize: '12px', color: '#333',
-                    }}>© 2025 Your Name. All rights reserved.</span>
+                    }}>© 2026 Khairul Rizma. All rights reserved.</span>
                     <span style={{
                         fontFamily: "'Playfair Display', serif",
                         fontStyle: 'italic', fontSize: '13px', color: '#444',
-                    }}>Crafted with care ✦</span>
+                    }}>Keep Building</span>
                 </div>
             </div>
 
